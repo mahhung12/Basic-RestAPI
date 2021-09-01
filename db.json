@@ -1,0 +1,67 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "img": "https://picsum.photos/id/1/150/150",
+      "name": "Product 1",
+      "type": "Technology",
+      "cost": 150
+    },
+    {
+      "id": 2,
+      "img": "https://picsum.photos/id/30/150/150",
+      "name": "Product 2",
+      "type": "Social",
+      "cost": 350
+    },
+    {
+      "id": 3,
+      "img": "https://picsum.photos/id/56/150/150",
+      "name": "Product 3",
+      "type": "Creative",
+      "cost": 175
+    },
+    {
+      "id": 4,
+      "img": "https://picsum.photos/id/15/150/150",
+      "name": "Product 4",
+      "type": "Environment",
+      "cost": 200
+    },
+    {
+      "id": 5,
+      "img": "https://picsum.photos/id/135/150/150",
+      "name": "Ocean",
+      "type": "OceanEye",
+      "cost": 1280
+    },
+    {
+      "id": 6,
+      "img": "https://picsum.photos/id/265/150/150",
+      "name": "Window",
+      "type": "Iron door",
+      "cost": 769
+    },
+    {
+      "id": 7,
+      "img": "https://picsum.photos/id/132/150/150",
+      "name": "Test1",
+      "type": "Test1",
+      "cost": 132
+    },
+    {
+      "img": "https://picsum.photos/id/411/150/150",
+      "name": "Tower",
+      "type": "TechCity",
+      "cost": 153,
+      "id": 8
+    },
+    {
+      "img": "https://picsum.photos/id/295/150/150",
+      "name": "Ocean 1 ",
+      "type": "OceanEye",
+      "cost": 1300,
+      "id": 9
+    }
+  ]
+}
