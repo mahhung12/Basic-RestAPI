@@ -1,4 +1,3 @@
-
 /**
  * 
  * @param Handle change select (Add - Minus) Product by id 
@@ -67,6 +66,13 @@ const getRandomImageUrl = () => {
     var srcLink = `https://picsum.photos/id/${randomId}/150/150`;
     document.querySelector("#fileUpload").src = srcLink;
     return srcLink;
+}
+
+const handleRandomPhotoClick = async () => {
+    if (onImageUrlChange) {
+        const randomImageUrl = getRandomImageUrl();
+        onImageUrlChange(randomImageUrl)
+    }
 }
 
 document.querySelector(".addmore").addEventListener("click", onClickAddProduct);
