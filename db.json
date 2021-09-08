@@ -4,14 +4,14 @@
       "img": "https://picsum.photos/id/637/150/150",
       "name": "Product 1",
       "type": "Technology",
-      "cost": 2231,
+      "cost": 220,
       "id": 1
     },
     {
       "img": "https://picsum.photos/id/30/150/150",
-      "name": "Product 2",
-      "type": "Social",
-      "cost": 350,
+      "name": "Cup of Tea",
+      "type": "Drink",
+      "cost": 80,
       "id": 2
     },
     {
@@ -36,18 +36,11 @@
       "cost": 1280
     },
     {
-      "id": 6,
       "img": "https://picsum.photos/id/265/150/150",
       "name": "Window",
       "type": "Iron door",
-      "cost": 769
-    },
-    {
-      "id": 7,
-      "img": "https://picsum.photos/id/132/150/150",
-      "name": "Test1",
-      "type": "Test1",
-      "cost": 132
+      "cost": 769,
+      "id": 6
     },
     {
       "img": "https://picsum.photos/id/411/150/150",
@@ -60,7 +53,7 @@
       "img": "https://picsum.photos/id/295/150/150",
       "name": "Ocean 1 ",
       "type": "OceanEye",
-      "cost": 1300,
+      "cost": 130,
       "id": 9
     },
     {
@@ -76,6 +69,13 @@
       "type": "Workspace",
       "cost": 412,
       "id": 11
+    },
+    {
+      "img": "https://picsum.photos/id/477/150/150",
+      "name": "Ocean 2",
+      "type": "OceanEye",
+      "cost": 1234,
+      "id": 12
     }
   ]
 }

@@ -169,14 +169,97 @@
   color: #ffffff;
   font-size: 15px;
 }
+.basic-restAPI .filter-page {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
+  background-image: linear-gradient(to right, #1bf67b, #0d736e);
+}
+.basic-restAPI .filter-page__search {
+  position: relative;
+  width: 290px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.basic-restAPI .filter-page__search input#search-bar {
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 0 60px 0 20px;
+  width: 100%;
+  height: 45px;
+  font-size: 1rem;
+  border: 1px solid #d0cfce;
+  outline: none;
+  position: absolute;
+}
+.basic-restAPI .filter-page__search input#search-bar:focus {
+  border: 1px solid #008abf;
+  transition: 0.35s ease;
+  color: #008abf;
+}
+.basic-restAPI .filter-page__search input#search-bar:focus::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+.basic-restAPI .filter-page__search input#search-bar:focus::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+.basic-restAPI .filter-page__search input#search-bar:focus:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+.basic-restAPI .filter-page__search .search-icon {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  font-size: 16px;
+  top: -37px;
+  right: -10px;
+}
+.basic-restAPI .filter-page .wrap-sort {
+  position: relative;
+}
+.basic-restAPI .filter-page .wrap-sort p {
+  position: absolute;
+  height: 45px;
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #008abf;
+  top: 23%;
+  left: 10%;
+  z-index: 2;
+}
+.basic-restAPI .filter-page .wrap-sort .filter-page__sort {
+  width: 150px;
+  height: 45px;
+  line-height: 26px;
+  padding-left: 80px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+.basic-restAPI .filter-page .wrap-sort .filter-page__sort option {
+  color: #008abf;
+  font-size: 1rem;
+  line-height: 26px;
+  border-radius: 4px;
+  padding: 4px;
+}
 .basic-restAPI .wrap-content {
   background-image: linear-gradient(to right, #1bf67b, #0d736e);
-  padding: 20px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
 }
 .basic-restAPI .wrap-content .header-content {
-  margin: 50px auto;
+  margin: 0px auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

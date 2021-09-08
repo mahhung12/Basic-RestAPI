@@ -6,26 +6,36 @@
 
 
 var courseApi = "http://localhost:3000/product";
-
 function start() {
     getProduct(renderProduct);
+    // getProduct(function (products) {
+    //     renderProduct(products);
+    // });
 }
 
 start();
 
+
+/**
+ * #fetch funciton
+ * @param {callback} callback 
+ * 
+ */
 // Get Courses
 function getProduct(callback) {
     fetch(courseApi)
         .then(function (response) {
             return response.json();
         })
-        .then(callback);
+        .then(callback)
 }
 
+
 // Render Courses
-function renderProduct(Product) {
+function renderProduct(data) {
+    console.table(data);
     var listProductsBlock = document.querySelector(".header-content__items");
-    var htmls = Product.map(function (Product) {
+    var htmls = data.map(function (Product) {
         return `
         <div class="header-content__items__product product-${Product.id}">
             <img 
@@ -41,22 +51,20 @@ function renderProduct(Product) {
                     </div>
 
                     <div class="properties__name__action">
-                        <button
-                         class="AddCart"
-                         onClick="handleAddProductToCart(${Product.id})"
-                        >
-                         &#128722;
+
+                        <button 
+                            class="btn-wrapper AddCart"
+                            onClick="handleAddProductToCart(${Product.id})">
+                            &#128722;
                         </button>
                         <button 
                             class="EditCart"
-                            onClick="handleEditProduct(${Product.id})"
-                        >
+                            onClick="handleEditProduct(${Product.id})">
                             &#x270D;
                         </button>
                         <button 
                             class="Remove"
-                            onClick="handleDeleteProduct(${Product.id})"
-                        >
+                            onClick="handleDeleteProduct(${Product.id})">
                             🗑️
                         </button>
                     </div>
@@ -67,13 +75,12 @@ function renderProduct(Product) {
                             class="fakePrice fakePrice-${Product.id}"
                             value="${Product.cost}"
                         />
-                        <div class="costed price-${Product.id}">${Product.cost} <div class="dollar">$</div></div>
+                        <div class="costed price-${Product.id}">${Product.cost}<div class="dollar">$</div></div>
                     </div>
                     <div class="properties__value__quantity">
                         <button 
                             class="plus"
-                            onClick="SelectAddCart(${Product.id})"
-                        >
+                            onClick="SelectAddCart(${Product.id})">
                             &#43;
                         </button>
                         <input 
@@ -84,8 +91,7 @@ function renderProduct(Product) {
                         />
                         <button 
                             onClick="SelectMinusCart(${Product.id})"
-                            class="minus"
-                        >
+                            class="minus">
                             &#8722;
                         </button>
                     </div>
@@ -293,7 +299,7 @@ function updatedProduct(id) {
     };
     if (name.value != "" && img.src != "" && type.value != "" && price.value != "") {
         updateProduct(id, formData, function () {
-            getProduct(renderProduct);
+            // getProduct(renderProduct);
         });
     } else {
         alert("Hãy nhập đầy đủ thông tin");
