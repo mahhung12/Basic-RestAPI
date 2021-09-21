@@ -4,17 +4,15 @@
  * 
  */
 
-
 var courseApi = "http://localhost:3000/product";
 function start() {
-    getProduct(renderProduct);
-    // getProduct(function (products) {
-    //     renderProduct(products);
-    // });
+    // getProduct(renderProduct);
+    getProduct(function (products) {
+        renderProduct(products);
+    });
 }
 
 start();
-
 
 /**
  * #fetch funciton
@@ -33,7 +31,6 @@ function getProduct(callback) {
 
 // Render Courses
 function renderProduct(data) {
-    console.table(data);
     var listProductsBlock = document.querySelector(".header-content__items");
     var htmls = data.map(function (Product) {
         return `
@@ -51,7 +48,6 @@ function renderProduct(data) {
                     </div>
 
                     <div class="properties__name__action">
-
                         <button 
                             class="btn-wrapper AddCart"
                             onClick="handleAddProductToCart(${Product.id})">

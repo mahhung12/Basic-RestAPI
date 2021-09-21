@@ -216,7 +216,7 @@ $dark: #000;
 
         &__search {
             position: relative;
-            width: 290px;
+            width: 270px;
 
             display: flex;
             justify-content: center;
@@ -311,7 +311,7 @@ $dark: #000;
         // background-color: papayawhip;
         background-image: linear-gradient(to right, #1bf67b, #0d736e);
         // margin-top: 20px;
-        padding: 0 20px;
+        padding: 20px;
 
         display: flex;
         flex-direction: column;
@@ -380,7 +380,7 @@ $dark: #000;
                             }
 
                             .AddCart {
-                                display: none;
+                                // display: none;
                             }
                             .EditCart,
                             .Remove,

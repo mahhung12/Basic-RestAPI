@@ -180,7 +180,7 @@
 }
 .basic-restAPI .filter-page__search {
   position: relative;
-  width: 290px;
+  width: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,7 +254,7 @@
 }
 .basic-restAPI .wrap-content {
   background-image: linear-gradient(to right, #1bf67b, #0d736e);
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -310,9 +310,6 @@
 .basic-restAPI .wrap-content .header-content__items__product-properties .properties__name__content:hover {
   cursor: pointer;
   opacity: 0.7;
-}
-.basic-restAPI .wrap-content .header-content__items__product-properties .properties__name .AddCart {
-  display: none;
 }
 .basic-restAPI .wrap-content .header-content__items__product-properties .properties__name .EditCart,
 .basic-restAPI .wrap-content .header-content__items__product-properties .properties__name .Remove,

@@ -1,78 +1,83 @@
-var search = document.querySelector('.filter-page__search');
+var search = document.querySelector('.filter-page__search__value');
 var sort = document.querySelector('.filter-page__sort');
+var option = document.querySelectorAll('.optionValue');
+var index = 0;
+var indexType = 0;
+
+search.addEventListener('input', function (e) {
+    console.log(e.target.value);
+
+    var valueSearch = e.target.value;
 
 
-function filterSort() {
+})
+
+sort.addEventListener('mouseout', function () {
     var option = sort.value;
-    console.log(option);
-}
-
-sort.addEventListener('change', function () {
-    console.log('You selected: ', this.value);
-    var option = this.value;
-
     switch (option) {
         case 'all':
             start();
             break;
         case 'price':
-            var data = SortByPrice();
-            console.table("AFTER SORT -> DATA : ", data);
+            var data;
+            if (index % 2 === 0) {
+                data = SortByPrice(0);
+            } else {
+                data = SortByPrice(1);
+            }
+            index++;
 
-            var result = data.map((value, index) => {
-                console.log("value -> ", value);
-            })
-
-            var formData = {
-                img: img.src,
-                name: name.value,
-                type: type.value,
-                cost: parseInt(price.value),
-            };
+            var pro = Promise.resolve(data);
+            pro.then(function (value) {
+                renderProduct(value);
+            });
             break;
         case 'type':
-            SortByType();
+            var data;
+            if (indexType % 2 === 0) {
+                data = SortByType(0);
+            } else {
+                data = SortByType(1);
+            }
+            indexType++;
+
+            var pro = Promise.resolve(data);
+            pro.then(function (value) {
+                renderProduct(value);
+            });
             break;
         default:
             break;
     }
 });
 
-function updateSortByPrice(data, callback) {
-    var options = {
-        method: "PATCH",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-    };
-    fetch(courseApi, options)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(callback);
-}
-
-async function SortByPrice() {
+async function SortByPrice(index) {
     const response = await fetch(courseApi);
     var data = await response.json();
 
-    // var data = getProduct(function (data) {
-    //     console.table(data);
-    //     console.log("Type of data : ", typeof data);
-
-    //     // return Promise.resolve(data);
-    //     return data;
-    // });
-
-    // console.table("TYPE OF DATA => ", typeof data);
-
-    return data.sort(function (a, b) {
-        return parseFloat(b.cost) - parseFloat(a.cost);
-    });
-
+    if (index === 0) {
+        return data.sort(function (a, b) {
+            return parseFloat(a.cost) - parseFloat(b.cost);
+        });
+    } else if (index === 1) {
+        return data.sort(function (a, b) {
+            return parseFloat(b.cost) - parseFloat(a.cost);
+        });
+    }
 }
 
-function SortByType() {
+async function SortByType(index) {
+    const response = await fetch(courseApi);
+    var data = await response.json();
+    var field = "type";
+
+    if (index === 0) {
+        return data.sort((a, b) => (a[field] || "").toString().localeCompare((b[field] || "").toString()));
+    } else if (index === 1) {
+        return data.sort((a, b) => (b[field] || "").toString().localeCompare((a[field] || "").toString()));
+    }
+}
+
+async function Search(product) {
 
 }
