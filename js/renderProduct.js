@@ -196,7 +196,7 @@ function handleEditProduct(id) {
     var currentType = document.querySelector('.style-' + id).textContent;
     var currentPrice = document.querySelector('.price-' + id).textContent;
 
-    console.log(currentName)
+    // console.log(currentName)
 
     ProductEdit.innerHTML = `
             <div class="add__product updated-${id}">
