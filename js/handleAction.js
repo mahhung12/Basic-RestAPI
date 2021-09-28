@@ -43,7 +43,7 @@ function SelectMinusCart(id) {
 // Get price of Product
 function getCurrentPrice(id) {
     var price = document.querySelector('.fakePrice-' + id).value;
-    console.log("Price : " + price);
+    // console.log("Price : " + price);
     return parseInt(price);
 }
 
@@ -155,7 +155,7 @@ function onClickAddProduct() {
     // }
 
     addmore.className = 'toggleAdd'
-    console.log(addmore)
+    // console.log(addmore)
 }
 
 //

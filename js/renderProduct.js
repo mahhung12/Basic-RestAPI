@@ -275,7 +275,7 @@ function handleEditProduct(id) {
 
 function updatedProduct(id) {
     var productItem = document.querySelector(".updated-" + id);
-    console.log(productItem);
+    // console.log(productItem);
 
     var img = productItem.querySelector('.updateImg-' + id);
     var name = productItem.querySelector('.edit-name-' + id);
