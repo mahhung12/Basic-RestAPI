@@ -282,10 +282,10 @@ function updatedProduct(id) {
     var type = productItem.querySelector('.edit-type-' + id);
     var price = productItem.querySelector('.edit-price-' + id);
 
-    console.log("img - " + img);
-    console.log("name - " + name);
-    console.log("type - " + type);
-    console.log("price - " + price);
+    // console.log("img - " + img);
+    // console.log("name - " + name);
+    // console.log("type - " + type);
+    // console.log("price - " + price);
 
     var formData = {
         img: img.src,
